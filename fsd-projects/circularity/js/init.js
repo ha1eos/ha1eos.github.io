@@ -18,6 +18,10 @@ var init = function (window) {
         ///////////////////
         // PROGRAM SETUP //
         ///////////////////
+
+        /* THIS IS THE COMPLETED VERSION OF THIS PROJECT MEANING THAT
+        SOME STEPS WILL BE MISSING, PAY ATTENTION TO THE INDENTATION, AND 
+        TRY AND UNDERSTAND WHAT THE CODE MEANS IN YOUR OWN WAY */
         
         // TODO 1 : Declare and initialize our variables
         var circle;

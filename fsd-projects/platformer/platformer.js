@@ -26,6 +26,8 @@ $(function () {
     // ONLY CHANGE BELOW THIS POINT //
     //////////////////////////////////
 
+    //This project can be as complex as you want to be, pay attention to what each 
+    //argument means for each functions
     // TODO 1 - Enable the Grid
     toggleGrid();
 

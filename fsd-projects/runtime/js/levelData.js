@@ -18,6 +18,10 @@ var makeLevelData = function (window) {
           { type: "sawblade", x: 400, y: groundY },
           { type: "sawblade", x: 600, y: groundY },
           { type: "sawblade", x: 900, y: groundY },
+          { type: 'enemy',x: 500, y:groundY - 50 },
+          { type: 'reward', x:800, y:groundY - 50},
+          { type: 'endMarker', x:1400, y: groundY -50}
+
         ],
       },
       {
@@ -25,11 +29,31 @@ var makeLevelData = function (window) {
         number: 2,
         speed: -3,
         gameItems: [
-          { type: "sawblade", x: 400, y: groundY },
-          { type: "sawblade", x: 600, y: groundY },
-          { type: "sawblade", x: 900, y: groundY },
+          { type: "sawblade", x: 300, y: groundY },
+          { type: "sawblade", x: 650, y: groundY },
+          { type: "sawblade", x: 950, y: groundY },
+          { type: 'enemy',x: 600, y:groundY - 50 },
+          { type: 'reward', x:900, y:groundY - 50},
+          { type: 'endMarker', x:1500, y: groundY -50}
+
+          
         ],
       },
+      {
+        name: "Unrivaled Crashout",
+        number: 3,
+        speed: -3,
+        gameItems: [
+          { type: "sawblade", x: 400, y: groundY },
+          { type: "sawblade", x: 650, y: groundY },
+          { type: "sawblade", x: 850, y: groundY },
+          { type: 'enemy',x: 625, y:groundY - 50 },
+          { type: 'reward', x:850, y:groundY - 50},
+          { type: 'endMarker', x:1450, y: groundY -50}
+
+          
+        ],
+      }
     ];
     window.opspark.levelData = levelData;
   };
