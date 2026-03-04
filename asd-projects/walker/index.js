@@ -17,11 +17,11 @@ function runProgram(){
     RIGHT: 39,
     DOWN: 40,
   }
-  var walker = {
+  const walker = {
     x: 0,
     y: 0,
-    speedX: 1,
-    speedY: 1,
+    speedX: 0,
+    speedY: 0,
   }
   // Game Item Objects
 
@@ -36,7 +36,7 @@ function runProgram(){
   Note: You can have multiple event listeners for different types of events.
   */
   $(document).on('keydown', handleKeyDown);                          
-  $(document).on('keydown', handleKeyUp);  
+  $(document).on('keyup', handleKeyUp);  
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -47,8 +47,8 @@ function runProgram(){
   */
   function newFrame() {
   repositionGameItem()
-  wallCollision()
   redrawGameItem()
+  wallCollision()
 
   }
   
@@ -62,19 +62,19 @@ function runProgram(){
     console.log(event.which)
 
     if (event.which === KEY.LEFT) {
-      walker.speedX += -5
+      walker.speedX = -5
       console.log("left pressed")
     }
     if (event.which === KEY.UP) {
-      walker.speedY += -5
+      walker.speedY = -5
       console.log("up pressed")
     }
     if (event.which === KEY.RIGHT) {
-      walker.speedX += 5
+      walker.speedX = 5
       console.log("right pressed")
     }
     if (event.which === KEY.DOWN) {
-      walker.speedY += 5
+      walker.speedY = 5
       console.log ("down pressed")
     }
   }
@@ -119,10 +119,10 @@ function runProgram(){
     if (walker.y < 0) {
       walker.speedY -= walker.speedY
     }
-    if (walker.x > $("#board").width()) {
+    if (walker.x >= $("#board").width() - 50) {
       walker.speedX -= walker.speedX
     }
-    if (walker.y > $("#board").width()) {
+    if (walker.y >= $("#board").height() - 50) {
       walker.speedY -= walker.speedY
     }
     }
